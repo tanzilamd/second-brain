@@ -9,3 +9,6 @@
     
 - `FLOAT`, `NUMERIC` : Decimal numbers
     
+- `SERIAL` : Auto-increment (Postgres)
+    
+- `INT AUTO_INCREMENT` : Auto-increment (MySQL)
