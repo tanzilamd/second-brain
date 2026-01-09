@@ -27,4 +27,6 @@ Horizontal joins, junction table joins
 Common SQL data types and usage  
 
 [09 Useful PSQL Commands](09%20Useful%20PSQL%20Commands.md)  
-   Quick psql shortcuts: \dn, \di, \conninfo, \q
+Quick psql shortcuts: \dn, \di, \conninfo, \q
+
+[10 Auth Errors](10%20Auth%20Errors.md)
