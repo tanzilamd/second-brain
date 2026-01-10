@@ -7,6 +7,7 @@ Even though this is primarily for my own reference, I have made it public in cas
 ### Folders (clickable links)
 
 - [SQL](SQL/00%20SQL%20Index.md)
+- [Bash Scripting](00%20Table%20of%20Contents)
 
 ---
 
