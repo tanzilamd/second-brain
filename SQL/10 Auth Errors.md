@@ -63,10 +63,21 @@ sudo -u postgres psql
 \password postgres
 ```
 
-Now you can connect easily:
-```bash
-psql -U postgres -d my_database
-```
+**Now you can connect easily:**
 
+```bash
+sudo -u postgres psql
+```
+*Why: runs only `psql` as postgres.*  
+*When: quick database access, simple queries, fast checks.*
+
+```bash
+sudo -i -u postgres
+psql
+```
+*Why: full login as the postgres Linux user.*  
+*When: admin work like creating users/databases, config, maintenance.*
+
+---
 
 **Note:** This auth problem can affect setting up database extensions in VS Code, since they need proper password authentication.

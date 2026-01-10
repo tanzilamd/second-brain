@@ -1,16 +1,12 @@
 ### Create Relationships (Foreign Keys)
 
-- Adding a new column with foreign key:
-    
-
+Adding a new column with foreign key:
 ```sql
 ALTER TABLE table_name 
 ADD COLUMN column_name DATATYPE CONSTRAINT REFERENCES referenced_table_name(referenced_column_name);
 ```
 
-- Adding foreign key to an existing column:
-    
-
+Adding foreign key to an existing column:
 ```sql
 ALTER TABLE table_name 
 ADD FOREIGN KEY(column_name) REFERENCES referenced_table_name(referenced_column_name);
