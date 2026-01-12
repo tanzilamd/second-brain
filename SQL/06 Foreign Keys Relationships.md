@@ -24,14 +24,14 @@ Nothing extra. Only what matters.
 
 ---
 
-### ON UPDATE RESTRICT / ON DELETE CASCADE
+### ON UPDATE CASCADE/ ON DELETE RESTRICT 
 
 Usage Syntax
 ```sql
 FOREIGN KEY (child_column)
 REFERENCES parent_table(parent_column)
-ON UPDATE RESTRICT
-ON DELETE CASCADE
+ON UPDATE CASCADE
+ON DELETE RESTRICT
 ```
 
 
@@ -48,8 +48,8 @@ CREATE TABLE orders (
 
     FOREIGN KEY (user_id)
         REFERENCES users(id)
-        ON UPDATE RESTRICT
-        ON DELETE CASCADE
+        ON UPDATE CASCADE
+        ON DELETE RESTRICT
 );
 ```
 
@@ -63,12 +63,13 @@ INSERT INTO orders (user_id) VALUES (1);
 ```sql
 -- Try to update parent key
 UPDATE users SET id = 2 WHERE id = 1;
--- ❌ Blocked due to ON UPDATE RESTRICT
+-- ✅ Related rows in orders are updated automatically
 ```
 
 ```sql
 -- Delete parent row
 DELETE FROM users WHERE id = 1;
--- ✅ Related rows in orders are deleted automatically
+-- ❌ Blocked due to ON DELETE RESTRICT
+
 ```
 
